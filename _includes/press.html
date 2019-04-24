@@ -4,7 +4,11 @@
     <blockquote class="quote">
       <p>{{ item.quote }}</p>
       <cite class="type-h4">{{ item.source }}</cite>
-      <img class="quote-tmb" src="{{ item.img_url }}" alt="{{ item.source }}" />
+      <img
+        class="quote-tmb"
+        src="{{ item.img_url | relative_url }}"
+        alt="{{ item.source }}"
+      />
     </blockquote>
     {% endfor %}
     <h2>Press</h2>
@@ -15,7 +19,7 @@
           <div class="news-card-inner">
             <div class="news-body">
               <h4 class="news-title">
-                <a href="{{ item.url }}">{{ item.title }}</a>
+                <a href="{{ item.url | absolute_url }}">{{ item.title }}</a>
               </h4>
               <p>{{ item.source }}</p>
             </div>

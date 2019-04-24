@@ -4,12 +4,15 @@
       <h2>Sponsors</h2>
       <div class="logo-garden">
         <ul class="unstyled-list">
-          {% assign sponsors = site.sponsors | sort: 'position' %}
-          {% for item in sponsors %}
+          {% assign sponsors = site.sponsors | sort: 'position' %} {% for item
+          in sponsors %}
           <li>
             <div class="logo">
               <a href="{{ item.link }}" target="_blank">
-                <img src="{{ item.img_url | absolute_url}}" alt="{{ item.name }}" />
+                <img
+                  src="{{ item.img_url | absolute_url }}"
+                  alt="{{ item.name }}"
+                />
               </a>
             </div>
           </li>

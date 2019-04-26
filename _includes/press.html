@@ -6,7 +6,7 @@
       <cite class="type-h4">{{ item.source }}</cite>
       <img
         class="quote-tmb"
-        src="{{ item.img_url | relative_url }}"
+        src="{{ item.img_url | absolute_url }}"
         alt="{{ item.source }}"
       />
     </blockquote>
@@ -19,7 +19,7 @@
           <div class="news-card-inner">
             <div class="news-body">
               <h4 class="news-title">
-                <a href="{{ item.url | prepend: site.url }}">{{ item.title }}</a>
+                <a href="{{ item.link_url }}">{{ item.title }}</a>
               </h4>
               <p>{{ item.source }}</p>
             </div>
